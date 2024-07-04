@@ -1,0 +1,79 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="./Perfil/perfil.webp" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background: linear-gradient(43deg, #b606be 0%, #000000 14%, #690263 99%);
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	section{
+		margin: 70px 0;
+	}
+	h1 {
+		font-size: 3.8rem;
+		font-weight: bold;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	h2{
+		font-size: 2.5rem;
+		color:#ee82ee;
+		font-weight: 800;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	h3{
+		font-size: 1.7rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 10px;
+	}
+	h4{
+		font-size: 1.4rem;
+		color:violet;
+		font-weight: 800;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	p{
+		opacity: .88;
+	}
+	li{
+		background: linear-gradient(t);
+	}
+
+</style>
